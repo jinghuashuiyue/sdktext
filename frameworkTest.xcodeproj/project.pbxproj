@@ -13,7 +13,21 @@
 		84B60AA31DA88C9E00A3D169 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B60AA11DA88C9E00A3D169 /* Main.storyboard */; };
 		84B60AA51DA88C9E00A3D169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B60AA41DA88C9E00A3D169 /* Assets.xcassets */; };
 		84B60AA81DA88C9E00A3D169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B60AA61DA88C9E00A3D169 /* LaunchScreen.storyboard */; };
+		84E17FB01DA8D908005E0178 /* libSFSafari.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E17FAF1DA8D908005E0178 /* libSFSafari.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84B60AD01DA8982200A3D169 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84B60A951DA88C9E00A3D169 /* frameworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frameworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +40,8 @@
 		84B60AA41DA88C9E00A3D169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B60AA71DA88C9E00A3D169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B60AA91DA88C9E00A3D169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E17FAD1DA8D847005E0178 /* VKSafariDomainBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKSafariDomainBridge.h; sourceTree = "<group>"; };
+		84E17FAF1DA8D908005E0178 /* libSFSafari.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSFSafari.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E17FB01DA8D908005E0178 /* libSFSafari.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +75,8 @@
 		84B60A971DA88C9E00A3D169 /* frameworkTest */ = {
 			isa = PBXGroup;
 			children = (
+				84E17FA91DA8D847005E0178 /* FenMiSDk */,
+				84E17F9C1DA8CEAA005E0178 /* New Group */,
 				84B60A9B1DA88C9E00A3D169 /* AppDelegate.h */,
 				84B60A9C1DA88C9E00A3D169 /* AppDelegate.m */,
 				84B60A9E1DA88C9E00A3D169 /* ViewController.h */,
@@ -79,6 +98,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		84E17F9C1DA8CEAA005E0178 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		84E17FA91DA8D847005E0178 /* FenMiSDk */ = {
+			isa = PBXGroup;
+			children = (
+				84E17FAA1DA8D847005E0178 /* include */,
+			);
+			path = FenMiSDk;
+			sourceTree = "<group>";
+		};
+		84E17FAA1DA8D847005E0178 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				84E17FAB1DA8D847005E0178 /* SFSafari */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		84E17FAB1DA8D847005E0178 /* SFSafari */ = {
+			isa = PBXGroup;
+			children = (
+				84E17FAF1DA8D908005E0178 /* libSFSafari.a */,
+				84E17FAD1DA8D847005E0178 /* VKSafariDomainBridge.h */,
+			);
+			path = SFSafari;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +140,7 @@
 				84B60A911DA88C9E00A3D169 /* Sources */,
 				84B60A921DA88C9E00A3D169 /* Frameworks */,
 				84B60A931DA88C9E00A3D169 /* Resources */,
+				84B60AD01DA8982200A3D169 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,7 +162,8 @@
 				TargetAttributes = {
 					84B60A941DA88C9E00A3D169 = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 425M73U764;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -272,10 +325,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 潜 陈 (73KX5K3MD2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 潜 陈 (73KX5K3MD2)";
+				DEVELOPMENT_TEAM = 425M73U764;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworkTest",
+				);
 				INFOPLIST_FILE = frameworkTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WL.frameworkTest;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworkTest",
+					"$(PROJECT_DIR)/frameworkTest/include/SFSafari",
+					"$(PROJECT_DIR)/frameworkTest/FenMiSDk/include/SFSafari",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiaoyue.fenmidev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = fenmidev_Development;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -283,10 +353,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hangzhou Jiaoyue Network Technology Co., Ltd. (425M73U764)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hangzhou Jiaoyue Network Technology Co., Ltd. (425M73U764)";
+				DEVELOPMENT_TEAM = 425M73U764;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworkTest",
+				);
 				INFOPLIST_FILE = frameworkTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WL.frameworkTest;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworkTest",
+					"$(PROJECT_DIR)/frameworkTest/include/SFSafari",
+					"$(PROJECT_DIR)/frameworkTest/FenMiSDk/include/SFSafari",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiaoyue.fenmidev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5580ad9-6fae-4c9b-aa42-e9c040057ae7";
+				PROVISIONING_PROFILE_SPECIFIER = fenmidev_AdHoc;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -309,6 +397,7 @@
 				84B60AAE1DA88C9E00A3D169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
